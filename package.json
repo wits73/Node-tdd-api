@@ -6,7 +6,9 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "sequelize": "^3.30.2",
+    "sqlite3": "^4.0.2"
   },
   "devDependencies": {
     "mocha": "^5.2.0",
@@ -14,8 +16,8 @@
     "supertest": "^3.1.0"
   },
   "scripts": {
-    "test": "mocha index.spec.js",
-    "start": "node index.js"
+    "test": "NODE_ENV=test mocha api/user/user.spec.js -w",
+    "start": "node bin/www.js"
   },
   "author": "",
   "license": "ISC"
